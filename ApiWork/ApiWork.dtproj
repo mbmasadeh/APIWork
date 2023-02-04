@@ -26,26 +26,73 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-HF3J8UM</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjd9q7rvCvkurKyN/vBPh9gAAAAACAAAAAAAQZgAAAAEAACAAAACENy1KFHl+xP6Gj+y0WH4M5QqYsgJ+VT3Lh7hZrWYrHQAAAAAOgAAAAAIAACAAAAAU3DMUgqycSJdwqqlnhIWG5CrAgHKM92Feb4C9po+8JJAAAADLsEm0IY2RB1hPjK7Hx/f2VPfETn6P8/bFFtbblRoABi5QsHNJqci9SN3j2FF968MxqgAUBYz9/22VswhTKo6WQ6TzeEmk7WMG86wtldAaCSshIt+afDD58urvHxQuOWiGdX+Y4KXgQWcbeDE4TJpQMQWq/7Sho1A9kcbn9Wo0TO3SVwf6CDRc1idpsrV23XNAAAAA5QOWCi0sCftMWAV/nFM0ITQUOs5ANMxNqzyoaDR1jw2NZgDBzXrLhhIP/+t0ZvXEZkd/vTYD11sm1Ky29+osVA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjd9q7rvCvkurKyN/vBPh9gAAAAACAAAAAAAQZgAAAAEAACAAAAB5QOpMV5DzJ1YEHsJz4N5dUOlmll+rHjXlVPa+d0ApkAAAAAAOgAAAAAIAACAAAACC3htgHGopJBTJoGp+O9wk/S0v+EoC4zodVIXcqPGrXZAAAADTCn/HYqO/9AUkjXLacmAv4rJREfzO/yvWrOM5kC2vYA3JNe/YHi8sR2YoyzqrcZ9YJMQGmAmlj9uWOVchfZENXDc6I4fa0BhZfqlQPX2s/6puMI7c0lrM/Zo6CmK+9dWaOjhwmCKmNICOIUCDsKALOk6tXwU+XYLTF9exZLS/jNOtT0ZCiQk1uI+5456bDEhAAAAAdC3fTPUPYTR2YfMj/CYUmCKWjcP9HYCz66R6CYe7qJgg1dgBsY2GGVtYi+FHZ7gBw4KpojX5li1GZ24diNhNcg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="Package.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DailyWork.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DWH.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters />
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="Package.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="DailyWork.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{7499CA75-A9E8-4553-B62B-9E6168BE5E48}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E0E38B68-D81B-43CD-B04E-A4A16DCD7FF7}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{24FE292F-E3B3-4AD8-A58B-0C0D38ED3178}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="CurrenicesUrl">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{F4154BD8-32AF-48D0-BB8F-CA77805293B2}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">https://openexchangerates.org/api/currencies.json?prettyprint=false&amp;show_alternative=false&amp;show_inactive=false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="HistoricalUrl">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{0F400FD8-0864-434C-81E1-C3F1E704F61E}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">https://openexchangerates.org/api/historical/2012-07-10.json?app_id=ba0345f581f048f391d80e0f9ac570f1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DWH.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{9DBC4C7D-1C9C-4961-99C5-18F9D95469AA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{23F8D530-E153-4897-81BA-DD74654E7203}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
